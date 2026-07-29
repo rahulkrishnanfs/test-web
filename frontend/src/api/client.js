@@ -1,6 +1,11 @@
 import axios from "axios";
 
-const baseURL = import.meta.env.VITE_API_BASE_URL || "http://localhost:8009";
+// Priority: explicit env var -> localhost in dev -> same-origin "/api" proxy in prod.
+// The "/api" default is served by the Vercel rewrite in vercel.json, so a
+// production build works with no env vars and no cross-origin CORS.
+const baseURL =
+  import.meta.env.VITE_API_BASE_URL ||
+  (import.meta.env.DEV ? "http://localhost:8009" : "/api");
 
 const client = axios.create({ baseURL });
 
