@@ -1,0 +1,80 @@
+:root {
+  --cn-accent: #6c5ce7;
+  --cn-accent-2: #00cec9;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
+    Arial, sans-serif;
+  min-height: 100vh;
+}
+
+.cn-navbar-brand {
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+
+.cn-hero {
+  padding: 6rem 0 5rem;
+  background: radial-gradient(
+      1200px 500px at 10% -10%,
+      rgba(108, 92, 231, 0.25),
+      transparent
+    ),
+    radial-gradient(
+      1000px 500px at 100% 0%,
+      rgba(0, 206, 201, 0.18),
+      transparent
+    );
+}
+
+.cn-hero h1 {
+  font-size: clamp(2.4rem, 5vw, 3.6rem);
+  font-weight: 800;
+  letter-spacing: -1px;
+}
+
+.cn-gradient-text {
+  background: linear-gradient(90deg, var(--cn-accent), var(--cn-accent-2));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.cn-feature-card {
+  height: 100%;
+  border: none;
+  border-radius: 1rem;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.cn-feature-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+}
+
+.cn-stat-card {
+  border: none;
+  border-radius: 1rem;
+}
+
+.cn-stat-value {
+  font-size: 2rem;
+  font-weight: 800;
+}
+
+.cn-qr-wrap {
+  background: #fff;
+  padding: 1.25rem;
+  border-radius: 1rem;
+  display: inline-block;
+}
+
+.cn-page {
+  min-height: calc(100vh - 56px);
+}
+
+.cn-code-pill {
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  letter-spacing: 1px;
+}

@@ -1,0 +1,15 @@
+services:
+  db:
+    image: postgres:16-alpine
+    container_name: cursor_northampton_db
+    environment:
+      POSTGRES_USER: cursor
+      POSTGRES_PASSWORD: cursor
+      POSTGRES_DB: cursor_northampton
+    ports:
+      - "5432:5432"
+    volumes:
+      - cn_pgdata:/var/lib/postgresql/data
+
+volumes:
+  cn_pgdata:
